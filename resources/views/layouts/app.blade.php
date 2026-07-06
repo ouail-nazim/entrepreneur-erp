@@ -14,7 +14,17 @@
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
     <!-- Scripts -->
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    @php
+        $manifestPath = public_path('build/manifest.json');
+        $useVite = file_exists($manifestPath);
+    @endphp
+
+    @if($useVite)
+        @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    @else
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+    @endif
 </head>
 <body>
     <div id="app">
