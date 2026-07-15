@@ -204,7 +204,6 @@
                     ['icon'=>'fa-helmet-safety','key'=>'civil'],
                     ['icon'=>'fa-hotel','key'=>'residences'],
                     ['icon'=>'fa-chart-line','key'=>'investment'],
-                    ['icon'=>'fa-compass-drafting','key'=>'studies'],
                 ]; @endphp
                 @foreach($svcs as $s)
                 <div class="col-lg-4 col-md-6 fade-in">
