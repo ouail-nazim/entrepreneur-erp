@@ -26,17 +26,17 @@ class DatabaseSeeder extends Seeder
 
         // Admin user
         $admin = \App\Models\User::factory()->create([
-            'name' => 'Admin User',
-            'email' => 'admin@admin.test',
-            'password' => bcrypt('admin'),
+            'name' => 'Admin',
+            'email' => 'moustafamarouf24_admin@gmail.com',
+            'password' => bcrypt('U*31xJ/65z+ln?v@va'),
         ]);
         $admin->assignRole('admin');
 
         // Manager user
         $manager = \App\Models\User::factory()->create([
-            'name' => 'Manager User',
-            'email' => 'manager@admin.test',
-            'password' => bcrypt('manager'),
+            'name' => 'Manager',
+            'email' => 'moustafamarouf24_manager@gmail.com',
+            'password' => bcrypt('cKB6qh£4SGr2u{HPI-'),
         ]);
         $manager->assignRole('manager');
 
